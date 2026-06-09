@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+python3 - << 'PYEOF'
+with open('/home/claude/photo_b64.txt','r') as f:
+    photo_b64 = f.read().strip()
+with open('/home/claude/logo_clean_b64.txt','r') as f:
+    logo_b64 = f.read().strip()
+
+html = '''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -262,4 +268,9 @@ canvas#flowers{position:absolute;top:0;left:0;width:100%;height:100%;pointer-eve
 })();
 </script>
 </body>
-</html>
+</html>'''
+
+with open('/mnt/user-data/outputs/tanya_yash_engagement.html','w') as f:
+    f.write(html)
+print("done", len(html))
+PYEOF
